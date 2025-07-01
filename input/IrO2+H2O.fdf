@@ -1,0 +1,27 @@
+LatticeConstant 1.0 Ang
+%block LatticeVectors
+ 4.50531387 0.00000000 0.00000000
+ 0.00000000 4.50531387 0.00000000
+ 0.00000000 0.00000000 40.00000000
+%endblock LatticeVectors
+
+NumberOfAtoms 9
+AtomicCoordinatesFormat Ang
+%block AtomicCoordinatesAndAtomicSpecies
+  0.00000000  0.00000000  9.20582344 1 # 1: Ir
+  2.25265694  2.25265694 10.79417656 1 # 2: Ir
+  0.86203189  3.64328198 10.79417656 2 # 3: O
+  3.64328198  0.86203189 10.79417656 2 # 4: O
+  3.11468882  3.11468882  9.20582344 2 # 5: O
+  1.39062505  1.39062505  9.20582344 2 # 6: O
+  2.25000000  2.25000000 13.79417656 2 # 7: O
+  3.05000000  2.85000000 13.79417656 3 # 8: H
+  1.45000000  2.85000000 13.79417656 3 # 9: H
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+NumberOfSpecies 3
+%block ChemicalSpeciesLabel
+ 1 77 Ir
+ 2 8 O
+ 3 1 H
+%endblock ChemicalSpeciesLabel

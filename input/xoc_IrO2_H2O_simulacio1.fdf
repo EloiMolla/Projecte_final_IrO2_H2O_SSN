@@ -1,0 +1,110 @@
+
+SystemName IrO2 + H2O collition # Descriptive name of the system
+SystemLabel            simulacio1         # Short name for naming files
+
+# Species and atoms
+
+NumberOfSpecies       3
+NumberOfAtoms         9
+%block ChemicalSpeciesLabel
+  1   8  O
+  2   1  H
+  3   77  Ir
+%endblock ChemicalSpeciesLabel
+
+# Details Calculation
+PAO.BasisSize SZP
+xc.functional         GGA           # Exchange-correlation functional
+xc.authors            PBE           # Exchange-correlation version
+
+#SpinPolarized         true          # Logical parameters are: yes or no
+MeshCutoff           200. Ry        # Mesh cutoff. real space mesh
+
+LatticeConstant       1.0000 Ang
+%block LatticeVectors
+20.00000   0.000000  0.000000
+ 0.00000  20.000000  0.000000
+ 0.00000   0.000000 20.000000
+%endblock LatticeVectors
+
+%block kgrid_Monkhorst_Pack
+   1  0  0  0.
+   0  1  0  0.
+   0  0  1  0.
+%endblock Kgrid_Monkhorst_Pack
+
+
+# SCF options
+#SCFMustConvergence     true
+MaxSCFIterations       250          # Maximum number of SCF iter
+DM.MixingWeight       0.02          # New DM amount for next SCF cycle
+DM.Tolerance          3.d-4         # Tolerance in maximum difference
+                                    # between input and output DM
+DM.NumberPulay          6           # to use continuation files
+#DM.NumberBroyden       3
+#DM.AllowExtrapolation  false
+
+MD.UseSaveData           true
+
+Diag.DivideAndConquer 	true
+SolutionMethod        diagon        # OrderN or Diagon
+ElectronicTemperature  25 meV       # Temp. for Fermi smearing
+
+# -----------------------------
+#  MD options
+#  options for a basic MD run
+# -----------------------------
+
+# Options to Integrate Equations of motion
+
+# MD.TypeOfRun         verlet         # Standard Verlet algrithm
+                                    # for Molecular Dynamics
+
+MD.TypeOfRun         nose           # termostat
+
+MD.LengthTimeStep         1.0 fs    # time step integration
+                                    # Newton eqs of motion
+
+MD.Initial.Time.Step     1          #initial time step of MD
+
+MD.FinalTimeStep         25        #Final time step of MD
+
+# Initial Atomic coordinates and Velocity for MD run
+
+MD.InitialTemperature   700   K
+MD.TargetTemperature   700   K
+MD.NoseMass   100.0   Ry*fs**2
+
+MD.UseSaveXV 		true        # use atomic Positions
+                                    # and Velocities from
+                                    # a saved XV file
+
+AtomicCoordinatesFormat Ang         #Use Angstroms for atomic coordinates
+%block AtomicCoordinatesAndAtomicSpecies
+
+        0.000145       -0.000315         9.763392  3  ! O 1
+        2.252732        2.252409        10.239192  3  ! O 2
+        1.048980        3.456114        10.878392  1  ! O 3
+        3.456205        1.049114        10.877828  1  ! O 4
+        3.301710        3.301635         9.124403  1  ! O 5
+        1.203492        1.203272         9.124439  1  ! O 6
+        2.249912        2.247972        15.788741  1  ! O 7
+        3.012603        2.851540        15.792924  2  ! O 8
+        1.488140        2.851220        15.792498  2  ! O 9
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+#MD Output
+
+WriteCoorXmol          true         #Save the final coordinates in .xyz format
+
+WriteMDXmol            true         #Writes the coordinates
+                                    #of all atoms at all steps
+                                    #in a .ANI file
+                                    #in xyz format
+
+WriteMDhistory         true         #writes .MDE and .MD files
+                                    # with output data from MD simulation
+                                    # MDE contains: Temp, energy, volume, pressure
+                                    # (human readable)
+                                    # MD contains coords vel lattice vectors
+                                    # (unformatted; post-process with iomd.f)
