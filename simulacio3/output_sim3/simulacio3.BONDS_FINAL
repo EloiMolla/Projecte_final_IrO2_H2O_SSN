@@ -1,0 +1,37 @@
+Neighbors of:     1 Ir at:   0.3045 -0.6294 18.5206
+    6 O                     1.9586  Ang. Really at:   0.7717  3.0421 18.5100
+Neighbors of:     2 Ir at:   4.3554  4.6426 19.0607
+    5 O                     1.7876  Ang. Really at:   4.1550  6.2933 16.1203
+    3 O                     1.8070  Ang. Really at:   2.0385  5.7671 21.3030
+    6 O                     2.0973  Ang. Really at:   0.7717  3.0421 18.5100
+    4 O                     2.0987  Ang. Really at:   5.0323  3.6688 22.8453
+Neighbors of:     3 O at:   2.0385  5.7671 21.3030
+    2 Ir                    1.8070  Ang. Really at:   4.3554  4.6426 19.0607
+    4 O                     2.0997  Ang. Really at:   5.0323  3.6688 22.8453
+    6 O                     2.1709  Ang. Really at:   0.7717  3.0421 18.5100
+    5 O                     2.9755  Ang. Really at:   4.1550  6.2933 16.1203
+Neighbors of:     4 O at:   5.0323  3.6688 22.8453
+    2 Ir                    2.0987  Ang. Really at:   4.3554  4.6426 19.0607
+    3 O                     2.0997  Ang. Really at:   2.0385  5.7671 21.3030
+    8 H                     2.1878  Ang. Really at:   5.9764  4.4028 26.8029
+    9 H                     3.0258  Ang. Really at:   3.3400  5.0414 28.1318
+Neighbors of:     5 O at:   4.1550  6.2933 16.1203
+    2 Ir                    1.7876  Ang. Really at:   4.3554  4.6426 19.0607
+    6 O                     2.7865  Ang. Really at:   0.7717  3.0421 18.5100
+    3 O                     2.9755  Ang. Really at:   2.0385  5.7671 21.3030
+Neighbors of:     6 O at:   0.7717  3.0421 18.5100
+    1 Ir                    1.9586  Ang. Really at:   0.3045 -0.6294 18.5206
+    2 Ir                    2.0973  Ang. Really at:   4.3554  4.6426 19.0607
+    3 O                     2.1709  Ang. Really at:   2.0385  5.7671 21.3030
+    5 O                     2.7865  Ang. Really at:   4.1550  6.2933 16.1203
+Neighbors of:     7 O at:   4.3887  5.4655 29.5758
+    9 H                     0.9707  Ang. Really at:   3.3400  5.0414 28.1318
+    8 H                     1.7819  Ang. Really at:   5.9764  4.4028 26.8029
+Neighbors of:     8 H at:   5.9764  4.4028 26.8029
+    9 H                     1.5985  Ang. Really at:   3.3400  5.0414 28.1318
+    7 O                     1.7819  Ang. Really at:   4.3887  5.4655 29.5758
+    4 O                     2.1878  Ang. Really at:   5.0323  3.6688 22.8453
+Neighbors of:     9 H at:   3.3400  5.0414 28.1318
+    7 O                     0.9707  Ang. Really at:   4.3887  5.4655 29.5758
+    8 H                     1.5985  Ang. Really at:   5.9764  4.4028 26.8029
+    4 O                     3.0258  Ang. Really at:   5.0323  3.6688 22.8453
